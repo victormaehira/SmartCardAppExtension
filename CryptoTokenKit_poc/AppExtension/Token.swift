@@ -56,6 +56,6 @@ class Token: TKSmartCardToken, TKTokenDelegate {
     }
     func createSession(_ token: TKToken) throws -> TKTokenSession {
         tokenLog.info("createSession")
-        TokenSession(token: self)
+        return TokenSession(token: self)
     }
 }
