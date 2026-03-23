@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0D538BE62F7179270043E615 /* CryptoTokenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D538BE52F7179270043E615 /* CryptoTokenKit.framework */; };
+		0D538BF22F7179270043E615 /* AppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0D538BE32F7179270043E615 /* AppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0D32569A2F6DE6C3007A9FDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +26,46 @@
 			remoteGlobalIDString = 0D3256872F6DE6BF007A9FDF;
 			remoteInfo = CryptoTokenKit_poc;
 		};
+		0D538BF02F7179270043E615 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D3256802F6DE6BF007A9FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D538BE22F7179270043E615;
+			remoteInfo = AppExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D538BF32F7179270043E615 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0D538BF22F7179270043E615 /* AppExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D3256882F6DE6BF007A9FDF /* CryptoTokenKit_poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTokenKit_poc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3256992F6DE6C3007A9FDF /* CryptoTokenKit_pocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTokenKit_pocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3256A32F6DE6C3007A9FDF /* CryptoTokenKit_pocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTokenKit_pocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D538BE32F7179270043E615 /* AppExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AppExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D538BE52F7179270043E615 /* CryptoTokenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoTokenKit.framework; path = System/Library/Frameworks/CryptoTokenKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0D538BF62F7179270043E615 /* Exceptions for "AppExtension" folder in "AppExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0D538BE22F7179270043E615 /* AppExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0D32568A2F6DE6BF007A9FDF /* CryptoTokenKit_poc */ = {
@@ -43,6 +81,14 @@
 		0D3256A62F6DE6C3007A9FDF /* CryptoTokenKit_pocUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CryptoTokenKit_pocUITests;
+			sourceTree = "<group>";
+		};
+		0D538BE72F7179270043E615 /* AppExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0D538BF62F7179270043E615 /* Exceptions for "AppExtension" folder in "AppExtension" target */,
+			);
+			path = AppExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +115,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D538BE02F7179270043E615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D538BE62F7179270043E615 /* CryptoTokenKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +132,8 @@
 				0D32568A2F6DE6BF007A9FDF /* CryptoTokenKit_poc */,
 				0D32569C2F6DE6C3007A9FDF /* CryptoTokenKit_pocTests */,
 				0D3256A62F6DE6C3007A9FDF /* CryptoTokenKit_pocUITests */,
+				0D538BE72F7179270043E615 /* AppExtension */,
+				0D538BE42F7179270043E615 /* Frameworks */,
 				0D3256892F6DE6BF007A9FDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +144,17 @@
 				0D3256882F6DE6BF007A9FDF /* CryptoTokenKit_poc.app */,
 				0D3256992F6DE6C3007A9FDF /* CryptoTokenKit_pocTests.xctest */,
 				0D3256A32F6DE6C3007A9FDF /* CryptoTokenKit_pocUITests.xctest */,
+				0D538BE32F7179270043E615 /* AppExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0D538BE42F7179270043E615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D538BE52F7179270043E615 /* CryptoTokenKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +167,12 @@
 				0D3256842F6DE6BF007A9FDF /* Sources */,
 				0D3256852F6DE6BF007A9FDF /* Frameworks */,
 				0D3256862F6DE6BF007A9FDF /* Resources */,
+				0D538BF32F7179270043E615 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0D538BF12F7179270043E615 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				0D32568A2F6DE6BF007A9FDF /* CryptoTokenKit_poc */,
@@ -163,6 +230,28 @@
 			productReference = 0D3256A32F6DE6C3007A9FDF /* CryptoTokenKit_pocUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0D538BE22F7179270043E615 /* AppExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D538BF72F7179270043E615 /* Build configuration list for PBXNativeTarget "AppExtension" */;
+			buildPhases = (
+				0D538BDF2F7179270043E615 /* Sources */,
+				0D538BE02F7179270043E615 /* Frameworks */,
+				0D538BE12F7179270043E615 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0D538BE72F7179270043E615 /* AppExtension */,
+			);
+			name = AppExtension;
+			packageProductDependencies = (
+			);
+			productName = AppExtension;
+			productReference = 0D538BE32F7179270043E615 /* AppExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +273,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 0D3256872F6DE6BF007A9FDF;
 					};
+					0D538BE22F7179270043E615 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 0D3256832F6DE6BF007A9FDF /* Build configuration list for PBXProject "CryptoTokenKit_poc" */;
@@ -203,6 +295,7 @@
 				0D3256872F6DE6BF007A9FDF /* CryptoTokenKit_poc */,
 				0D3256982F6DE6C3007A9FDF /* CryptoTokenKit_pocTests */,
 				0D3256A22F6DE6C3007A9FDF /* CryptoTokenKit_pocUITests */,
+				0D538BE22F7179270043E615 /* AppExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +316,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0D3256A12F6DE6C3007A9FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D538BE12F7179270043E615 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +353,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D538BDF2F7179270043E615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +372,11 @@
 			isa = PBXTargetDependency;
 			target = 0D3256872F6DE6BF007A9FDF /* CryptoTokenKit_poc */;
 			targetProxy = 0D3256A42F6DE6C3007A9FDF /* PBXContainerItemProxy */;
+		};
+		0D538BF12F7179270043E615 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D538BE22F7179270043E615 /* AppExtension */;
+			targetProxy = 0D538BF02F7179270043E615 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -501,6 +613,58 @@
 			};
 			name = Release;
 		};
+		0D538BF42F7179270043E615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppExtension/AppExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.certisign.CryptoTokenKit-poc.AppExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0D538BF52F7179270043E615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppExtension/AppExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.certisign.CryptoTokenKit-poc.AppExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -536,6 +700,15 @@
 			buildConfigurations = (
 				0D3256B42F6DE6C3007A9FDF /* Debug */,
 				0D3256B52F6DE6C3007A9FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D538BF72F7179270043E615 /* Build configuration list for PBXNativeTarget "AppExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D538BF42F7179270043E615 /* Debug */,
+				0D538BF52F7179270043E615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
