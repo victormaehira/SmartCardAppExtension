@@ -40,7 +40,8 @@ class Token: TKSmartCardToken, TKTokenDelegate {
         }
         keyItem.label = "Chave privada mock"
         keyItem.constraints = [
-            NSNumber(value: TKTokenOperation.signData.rawValue): "PIN",
+            // NSNumber(value: TKTokenOperation.signData.rawValue): "PIN",
+            NSNumber(value: 2): "PIN", // equivalente a TKTokenOperation.signData
         ]
         let items: [TKTokenKeychainItem] = [certItem, keyItem]
                 self.keychainContents!.fill(with: items)
