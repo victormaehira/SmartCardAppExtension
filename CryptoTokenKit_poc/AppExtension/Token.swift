@@ -26,16 +26,24 @@ class Token: TKSmartCardToken, TKTokenDelegate {
         }
         let certObjectID: TKToken.ObjectID = "mock-certificate-1"
         let keyObjectID: TKToken.ObjectID = "mock-signing-key-1"
-        let certItem = TKTokenKeychainCertificate(certificate: certRef, objectID: certObjectID)
+        guard let certItem = TKTokenKeychainCertificate(certificate: certRef, objectID: certObjectID) else {
+            throw NSError(domain: TKErrorDomain, code: TKError.Code.corruptedData.rawValue, userInfo: [
+            NSLocalizedDescriptionKey: "mock: não foi possível criar TKTokenKeychainCertificate",
+            ])
+        }
         certItem.label = "Certificado mock"
-        let keyItem = TKTokenKeychainKey(certificate: certRef, objectID: keyObjectID)
+
+        guard let keyItem = TKTokenKeychainKey(certificate: certRef, objectID: keyObjectID) else {
+            throw NSError(domain: TKErrorDomain, code: TKError.Code.corruptedData.rawValue, userInfo: [
+                NSLocalizedDescriptionKey: "mock: não foi possível criar TKTokenKeychainKey",
+            ])
+        }
         keyItem.label = "Chave privada mock"
-        // Ajuste conforme o que você pedir no beginAuth (ex.: PIN no smart card)
         keyItem.constraints = [
             NSNumber(value: TKToken.Operation.signData.rawValue): "PIN",
         ]
         let items: [TKTokenKeychainItem] = [certItem, keyItem]
-        self.keychainContents!.fill(with: items)
+                self.keychainContents!.fill(with: items)
     }
     func createSession(_ token: TKToken) throws -> TKTokenSession {
         TokenSession(token: self)
